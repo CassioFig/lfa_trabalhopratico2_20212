@@ -1,4 +1,5 @@
 from utils.GrammarRead import GrammarReader
+from utils.PrintTable import PrintTable
 
 class CYK:
     def __init__(self):
@@ -8,7 +9,11 @@ class CYK:
         length = len(string)
 
         table = self.__loadTable(length, string)
+        print(table)
         table = self.__execute(table, length)
+
+        PrintTable(table, string).execute()
+
         if self.__isValid(table):
             print('String aceita!')
         else:

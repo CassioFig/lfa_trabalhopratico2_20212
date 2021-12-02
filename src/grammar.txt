@@ -1,4 +1,4 @@
-S => AB | XB
-A => a
-B => b
-X => AS
+S => AB | BC
+A => BA | a
+B => CC | b
+C => AB | a
