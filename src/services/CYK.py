@@ -45,7 +45,7 @@ class CYK:
                             if len(value) == 2:
                                 if value[0] in table[j][j+k] and value[1] in table[j+k+1][j+i]:
                                     table[j][j+i].append(variable)
-                                    print(f'A variação {value} está presente em {variable}, posição ({j + 1},{(j+i) + 1}): {self.__removeRepeated(table[j][j+i])}')
+                                    print(f'A variação {value} da combinação de {table[j][j+k]} com {self.__removeRepeated(table[j+k+1][j+i])} está presente em {variable}, posição ({j + 1},{(j+i) + 1}): {self.__removeRepeated(table[j][j+i])}')
         return table
 
     def __isValid(self, table):
